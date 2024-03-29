@@ -1,0 +1,32 @@
+CREATE TABLE Cliente (
+  id_cliente INT AUTO_INCREMENT PRIMARY KEY,
+  Nome VARCHAR(60) NOT NULL,
+  CPF VARCHAR(14) NOT NULL,
+  Email VARCHAR(150) NOT NULL,
+  Telefone VARCHAR(15) NOT NULL
+);
+
+INSERT INTO Cliente (id_cliente, Nome, CPF, Email, Telefone) VALUES
+  (1, 'Maiara', '123.456.789-90', 'Maiara@gmail.com', '(15) 99663-2147'),
+  (2, 'Matheus', '987.654.321-10', 'Matheus@email.com.br', '(11) 9987-4123'),
+  (3, 'Marcelo', '963.345.246-60', 'Marcelo@Outlook.com', '(18) 9979-5912');
+
+
+CREATE TABLE Pet (
+  id_pet INT AUTO_INCREMENT PRIMARY KEY,
+  Nome VARCHAR(60) NOT NULL,
+  Especie VARCHAR(50) NOT NULL,
+  DataNascimento DATE NOT NULL,
+  Cliente_id INT AUTO_INCREMENT,
+  FOREIGN KEY (Cliente_id) REFERENCES Cliente(id_cliente)
+);
+
+
+INSERT INTO Pet (id_pet, Nome, Especie, DataNascimento, Cliente_id) VALUES
+  (1, 'Nila', 'Golden', '2024-11-01', 1),
+  (2, 'Ragnar', 'Husky', '2020-09-23', 2),
+  (3, 'Marley', 'Labrador', '2022-07-05', 3);
+  
+  
+SELECT * FROM Cliente;
+SELECT * FROM Pet;
