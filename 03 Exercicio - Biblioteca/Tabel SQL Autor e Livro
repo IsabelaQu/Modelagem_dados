@@ -1,0 +1,31 @@
+CREATE TABLE Autor (
+  id_Autor INT AUTO_INCREMENT PRIMARY KEY,
+  Nome VARCHAR(150) NOT NULL,
+  Email VARCHAR(250) NOT NULL,
+  Nacionalidade VARCHAR(50) NOT NULL,
+  DataNascimento DATE NOT NULL
+);
+
+
+INSERT INTO Autor (id_autor, Nome, Email, Nacionalidade, DataNascimento) VALUES
+  (1, 'George R. R. Martin', 'grmartin@gmail.com', 'Americano', '1948-09-20'),
+  (2, 'Eiichiro Oda', 'eiichiro.oda@outlook.com', 'Japonês', '1978-01-01'),
+  (3, 'George Orwell', 'orwell@gmail.com', 'Indiano', '1903-06-25');
+
+
+CREATE TABLE Livro (
+  id_Livro INT AUTO_INCREMENT PRIMARY KEY,
+  Titulo VARCHAR(30) NOT NULL,
+  QuantidadePaginas INT NOT NULL,
+  Acabamento VARCHAR(40) NOT NULL,
+  Editora VARCHAR(100) NOT NULL
+);
+
+
+INSERT INTO Livro (id_Livro, Titulo, QuantidadePaginas, Acabamento, Editora) VALUES
+  (1, 'A Game of Thrones', 600, 'Capa dura', 'Bantam Books'),
+  (2, 'One Piece', 250, 'Brochura', 'Shueisha'),
+  (3, 'A Revolução dos Bichos', 150, 'Brochura', 'Secker and Warburg');
+
+SELECT * FROM Autor;
+SELECT * FROM Livro;

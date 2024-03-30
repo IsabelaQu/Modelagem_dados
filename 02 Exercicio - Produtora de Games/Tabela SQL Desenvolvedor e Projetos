@@ -1,0 +1,29 @@
+CREATE TABLE Desenvolvedor (
+  id_Dev INT AUTO_INCREMENT PRIMARY KEY,
+  Nome VARCHAR(150) NOT NULL,
+  CPF VARCHAR(14) NOT NULL,
+  DataNascimento DATE NOT NULL
+);
+
+INSERT INTO Desenvolvedor (id_Dev, Nome, CPF, DataNascimento) VALUES
+  (1, 'Amanda', '123.456.789-90', '2024-11-01'),
+  (2, 'Pedro', '987.654.321-10', '2020-09-23'),
+  (3, 'Danilo', '963.345.246-60', '2022-07-05');
+  
+
+CREATE TABLE Projeto (
+  Id_Game INT AUTO_INCREMENT PRIMARY KEY,
+  Nome VARCHAR(150) NOT NULL,
+  Genero VARCHAR(50) NOT NULL,
+  DataLancamento DATE NOT NULL,
+  FaixaEtaria INT NOT NULL
+);
+
+
+INSERT INTO Projeto (Id_Game, Nome, Genero, DataLancamento, FaixaEtaria) VALUES
+  (1, 'Outlast', 'Terror', '2013-09-04', 18),
+  (2, 'Assassin''s Creed: Origins', 'Aventura', '2017-10-27', 18),
+  (3, 'Stardew Valley', 'RPG', '2016-02-28', 13);
+  
+SELECT * FROM Desenvolvedor;
+SELECT * FROM Projeto;
