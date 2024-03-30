@@ -9,7 +9,10 @@ CREATE TABLE Cliente (
 INSERT INTO Cliente (id_cliente, Nome, CPF, Email, Telefone) VALUES
   (1, 'Maiara', '123.456.789-90', 'Maiara@gmail.com', '(15) 99663-2147'),
   (2, 'Matheus', '987.654.321-10', 'Matheus@email.com.br', '(11) 9987-4123'),
-  (3, 'Marcelo', '963.345.246-60', 'Marcelo@Outlook.com', '(18) 9979-5912');
+  (3, 'Marcelo', '963.345.246-60', 'Marcelo@Outlook.com', '(18) 9979-5912'),
+  (4, 'Pedro', '381.095.720-81', 'Pedro.junior@gmail.com.br', '(19) 97553-3715'),
+  (5, 'Danilo', '984.304.500-92', 'danilo.silva@hotmail.br', '(21) 99813-2367'),
+  (6, 'Renan', '742.904.610-00', 'renar.henrique@outlook.com', '(15) 98291-6757');
 
 
 CREATE TABLE Pet (
@@ -25,7 +28,10 @@ CREATE TABLE Pet (
 INSERT INTO Pet (id_pet, Nome, Especie, DataNascimento, Cliente_id) VALUES
   (1, 'Nila', 'Golden', '2024-11-01', 1),
   (2, 'Ragnar', 'Husky', '2020-09-23', 2),
-  (3, 'Marley', 'Labrador', '2022-07-05', 3);
+  (3, 'Marley', 'Labrador', '2022-07-05', 3),
+  (4, 'Bu', 'Salsicha', '2024-01-01', 4),
+  (5, 'Woody', 'Vira-lata', '2018-06-10', 5),
+  (6, 'Pumba', 'Border', '2016-08-14', 6);
   
   
 SELECT * FROM Cliente;

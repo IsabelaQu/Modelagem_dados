@@ -1,0 +1,53 @@
+CREATE TABLE Locadora (
+  id_locadora INT AUTO_INCREMENT PRIMARY KEY,
+  Nome VARCHAR(150) NOT NULL,
+  Telefone VARCHAR(20) NOT NULL,
+  Email VARCHAR(200) NOT NULL
+);
+
+INSERT INTO Locadora (id_locadora, Nome, Telefone, Email) VALUES
+  (1, 'Extremo veiculos', '(15) 99663-2147', 'extremoVei@gmail.com'),
+  (2, 'auto scorpion', '(11) 9987-4123', 'auto.scorpion@outlook.br'),
+  (3, 'Movida', '(18) 9979-5912', 'movida.locadora@gmail.com'),
+  (4, 'Alugue Brasil', '(31) 1234-5678', 'atendimento@aluguebrasil.com'),
+  (5, 'LocCar', '(41) 6543-2109', 'contato@loccar.com'),
+  (6, 'RentCars', '(55) 98765-4321', 'contato@rentcars.com');
+  
+  CREATE TABLE Automovel (
+  id_automovel INT AUTO_INCREMENT PRIMARY KEY,
+  Placa VARCHAR(10) NOT NULL,
+  Modelo VARCHAR(60) NOT NULL,
+  Ano INT NOT NULL
+);
+
+INSERT INTO Automovel (id_automovel, Placa, Modelo, Ano) VALUES
+  (1, 'NBW0574', 'Cronos', 2022),
+  (2, 'JVN2939', 'Civic', 2017),
+  (3, 'GKN0590', 'Camaro', 2013),
+  (4, 'XYZ1234', 'Fusion', 2015),
+  (5, 'ABC5678', 'Corolla', 2020),
+  (6, 'DEF9012', 'Ecosport', 2019);
+
+
+CREATE TABLE Montadora (
+  id_montadora INT AUTO_INCREMENT PRIMARY KEY,
+  Nome VARCHAR(200) NOT NULL,
+  Site VARCHAR(255) NOT NULL,
+  Logotipo VARCHAR(100) NOT NULL
+);
+
+
+INSERT INTO Montadora (id_montadora, Nome, Site, Logotipo) VALUES
+  (1, 'Fiat', 'www.forte-fiat.com.br', 'fiat-logo.png'),
+  (2, 'Honda', 'www.benicar.com.br', 'honda-logo.jpng'),
+  (3, 'Chevrolet', 'www.chevrolet.com.br', 'chevrolet.webp'),
+  (4, 'Toyota', 'www.toyota.com.br', 'toyota-logo.png'),
+  (5, 'Volkswagen', 'www.vw.com.br', 'vw-logo.png'),
+  (6, 'Ford', 'www.ford.com.br', 'ford-logo.png');
+  
+  
+  
+  SELECT * FROM Locadora;
+  SELECT * FROM Automovel;
+  SELECT * FROM Montadora;
+  
