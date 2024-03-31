@@ -1,0 +1,17 @@
+CREATE TABLE alunos (
+  RA_Aluno INT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  endereco VARCHAR(200) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  data_nascimento DATE NOT NULL
+);
+
+INSERT INTO alunos (RA_Aluno, nome, endereco, email, data_nascimento) VALUES
+  (459621, 'Pedro', 'Sorocaba, SP', 'Pedro@Gmail.com', '2003-09-11'),
+  (968574, 'Matheus', 'Votorantim, SP', 'Matheus@Outlook.com.br', '2001-05-18'),
+  (362514, 'Maiara', 'Itu, SP', 'Maiara@Email.br', '2002-01-09');
+  (123456, 'Marcelo', 'São Paulo, SP', 'marcelo@gmail.com', '2000-12-15'),
+  (789123, 'Danilo', 'Campinas, SP', 'danilo@yahoo.com', '2004-07-20'),
+  (456789, 'Amanda', 'Rio de Janeiro, RJ', 'amanda@hotmail.com', '2003-03-30');
+
+SELECT * FROM alunos;

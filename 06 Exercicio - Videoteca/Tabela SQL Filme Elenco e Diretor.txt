@@ -1,0 +1,53 @@
+-- Criação da tabela Filme
+CREATE TABLE Filme (
+  id_filme INT AUTO_INCREMENT PRIMARY KEY,
+  titulo VARCHAR(150) NOT NULL,
+  duracao VARCHAR(10) NOT NULL,
+  idioma_original VARCHAR(50) NOT NULL,
+  preco DECIMAL(10, 2) NOT NULL
+);
+
+INSERT INTO Filme (id_filme, titulo, duracao, idioma_original, preco) VALUES
+  (1, 'Interstellar', '2h 49m', 'Inglês', 49.90),
+  (2, 'Matrix', '2h 16m', 'Inglês', 19.90),
+  (3, 'Kung Fu Panda 3', '1h 34m', 'Inglês', 60.00),
+  (4, 'La La Land', '2h 8m', 'Inglês', 29.90),
+  (5, 'Blade Runner 2049', '2h 44m', 'Inglês', 39.90),
+  (6, 'Black Panther', '2h 15m', 'Inglês', 34.90);
+
+
+CREATE TABLE Elenco (
+  id_ator INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(150) NOT NULL,
+  data_nascimento DATE NOT NULL,
+  nacionalidade VARCHAR(100) NOT NULL
+);
+
+INSERT INTO Elenco (id_ator, nome, data_nascimento, nacionalidade) VALUES
+  (1, 'Anne Hathaway', '1982-11-12', 'Estadunidense'),
+  (2, 'Keanu Reeves', '1964-09-02', 'Canadense'),
+  (3, 'Steven John Carell', '1962-08-16', 'Estadunidense'),
+  (4, 'Emma Stone', '1988-11-06', 'Estadunidense'),
+  (5, 'Ryan Gosling', '1980-11-12', 'Canadense'),
+  (6, 'Chadwick Boseman', '1976-11-29', 'Estadunidense');
+
+
+CREATE TABLE Diretor (
+  id_diretor INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(150) NOT NULL,
+  data_nascimento DATE NOT NULL,
+  nacionalidade VARCHAR(100) NOT NULL
+);
+
+INSERT INTO Diretor (id_diretor, nome, data_nascimento, nacionalidade) VALUES
+  (1, 'Christopher Nolan', '1970-07-30', 'Britânico'),
+  (2, 'Lana Wachowski', '1965-06-21', 'Estadunidense'),
+  (3, 'Mark Osborne', '1970-09-17', 'Estadunidense'),
+  (4, 'Damien Chazelle', '1985-01-19', 'Estadunidense'),
+  (5, 'Denis Villeneuve', '1967-10-03', 'Canadense'),
+  (6, 'Ryan Coogler', '1986-05-23', 'Estadunidense');
+
+SELECT * FROM Filme;
+SELECT * FROM Elenco;
+SELECT * FROM Diretor;
+

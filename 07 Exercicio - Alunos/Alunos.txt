@@ -1,0 +1,1 @@
+07º Exercício: Crie um banco de dados para armazenar dados de alunos. Um aluno deve ter RA, nome, data de nascimento, endereço e Email.

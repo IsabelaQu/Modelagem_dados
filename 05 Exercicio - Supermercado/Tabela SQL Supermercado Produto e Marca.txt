@@ -1,0 +1,70 @@
+CREATE TABLE Supermercado (
+  id_supermercado INT AUTO_INCREMENT PRIMARY KEY,
+  Nome VARCHAR(150) NOT NULL
+);
+
+INSERT INTO Supermercado (id_supermercado, Nome) VALUES
+  (1, 'Carrefour'),
+  (2, 'Walmart'),
+  (3, 'Max'),
+  (4, 'Extra'),
+  (5, 'Pão de Açúcar'),
+  (6, 'Assaí');
+
+
+CREATE TABLE Marca (
+  id_marca INT AUTO_INCREMENT PRIMARY KEY,
+  Nome VARCHAR(150) NOT NULL,
+  SAC VARCHAR(20) NOT NULL,
+  Nacionalidade VARCHAR(100) NOT NULL
+);
+
+INSERT INTO Marca (id_marca, Nome, SAC, Nacionalidade) VALUES
+  (1, 'PepsiCo', '0800 703 4444', 'Estadunidense'),
+  (2, 'Veja', '0800 775 2112', 'Brasileira'),
+  (3, 'Colgate', '0800 703 7722', 'Estadunidense'),
+  (4, 'Nestlé', '0800 770 2400', 'Suíça'),
+  (5, 'Huggies', '0800 709 5599', 'Estadunidense'),
+  (6, 'Bombril', '0800 770 4175', 'Brasileira');
+
+
+CREATE TABLE Produto (
+  id_produto INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(150) NOT NULL,
+  preco DECIMAL(10, 2) NOT NULL,
+  quant_estoque INT NOT NULL,
+  marca_nome VARCHAR(150) NOT NULL,
+  sac VARCHAR(20) NOT NULL,
+  nacionalidade VARCHAR(100) NOT NULL,
+  FOREIGN KEY (marca_nome) REFERENCES Marca(Nome)
+);
+
+
+INSERT INTO Produto (id_produto, nome, preco, quant_estoque, marca_nome, sac, nacionalidade)
+SELECT 1, 'Refrigerante Pepsi', 12.00, 100, Nome, SAC, Nacionalidade
+FROM Marca WHERE id_marca = 1;
+
+INSERT INTO Produto (id_produto, nome, preco, quant_estoque, marca_nome, sac, nacionalidade)
+SELECT 2, 'Limpador Multiuso', 5.90, 300, Nome, SAC, Nacionalidade
+FROM Marca WHERE id_marca = 2;
+
+INSERT INTO Produto (id_produto, nome, preco, quant_estoque, marca_nome, sac, nacionalidade)
+SELECT 3, 'Creme dental', 18.00, 540, Nome, SAC, Nacionalidade
+FROM Marca WHERE id_marca = 3;
+
+INSERT INTO Produto (id_produto, nome, preco, quant_estoque, marca_nome, sac, nacionalidade)
+SELECT 4, 'Chocolate Nestlé', 8.50, 200, Nome, SAC, Nacionalidade
+FROM Marca WHERE id_marca = 4;
+
+INSERT INTO Produto (id_produto, nome, preco, quant_estoque, marca_nome, sac, nacionalidade)
+SELECT 5, 'Fralda Huggies', 24.90, 150, Nome, SAC, Nacionalidade
+FROM Marca WHERE id_marca = 5;
+
+INSERT INTO Produto (id_produto, nome, preco, quant_estoque, marca_nome, sac, nacionalidade)
+SELECT 6, 'Esponja de Aço Bombril', 3.99, 500, Nome, SAC, Nacionalidade
+FROM Marca WHERE id_marca = 6;
+
+
+SELECT * FROM Supermercado; 
+SELECT * FROM Marca; 
+SELECT * FROM Produto;

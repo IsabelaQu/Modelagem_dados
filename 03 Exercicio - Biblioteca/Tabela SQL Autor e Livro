@@ -3,10 +3,10 @@ CREATE TABLE Autor (
   Nome VARCHAR(150) NOT NULL,
   Email VARCHAR(250) NOT NULL,
   Nacionalidade VARCHAR(50) NOT NULL,
-  DataNascimento DATE NOT NULL
+  data_nascimento DATE NOT NULL
 );
 
-INSERT INTO Autor (id_autor, Nome, Email, Nacionalidade, DataNascimento) VALUES
+INSERT INTO Autor (id_autor, Nome, Email, Nacionalidade, data_nascimento) VALUES
   (1, 'George R. R. Martin', 'grmartin@gmail.com', 'Americano', '1948-09-20'),
   (2, 'Eiichiro Oda', 'eiichiro.oda@outlook.com', 'Japonês', '1978-01-01'),
   (3, 'George Orwell', 'orwell@gmail.com', 'Indiano', '1903-06-25'),

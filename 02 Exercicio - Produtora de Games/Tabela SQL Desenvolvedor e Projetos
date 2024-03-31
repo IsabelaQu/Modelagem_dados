@@ -2,10 +2,10 @@ CREATE TABLE Desenvolvedor (
   id_Dev INT AUTO_INCREMENT PRIMARY KEY,
   Nome VARCHAR(150) NOT NULL,
   CPF VARCHAR(14) NOT NULL,
-  DataNascimento DATE NOT NULL
+  data_nascimento DATE NOT NULL
 );
 
-INSERT INTO Desenvolvedor (id_Dev, Nome, CPF, DataNascimento) VALUES
+INSERT INTO Desenvolvedor (id_Dev, Nome, CPF, data_nascimento) VALUES
   (1, 'Amanda', '123.456.789-90', '1997-03-23'),
   (2, 'Pedro', '987.654.321-10', '2001-02-18'),
   (3, 'Danilo', '963.345.246-60', '2002-07-05'),
@@ -17,11 +17,11 @@ CREATE TABLE Projeto (
   Id_Game INT AUTO_INCREMENT PRIMARY KEY,
   Nome VARCHAR(150) NOT NULL,
   Genero VARCHAR(50) NOT NULL,
-  DataLancamento DATE NOT NULL,
-  FaixaEtaria INT NOT NULL
+  data_lancamento DATE NOT NULL,
+  faixa_etaria INT NOT NULL
 );
 
-INSERT INTO Projeto (Id_Game, Nome, Genero, DataLancamento, FaixaEtaria) VALUES
+INSERT INTO Projeto (Id_Game, Nome, Genero, data_lancamento, faixa_etaria) VALUES
   (1, 'Outlast', 'Terror', '2013-09-04', 18),
   (2, 'Assassin''s Creed: Origins', 'Aventura', '2017-10-27', 18),
   (3, 'Stardew Valley', 'RPG', '2016-02-28', 13),
