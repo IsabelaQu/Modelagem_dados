@@ -1,0 +1,1 @@
+08º Exercício: Crie um banco de dados para armazenar dados de colaboradores de uma empresa. Um colaborador deve ter um código de identificação, nome, cpf, cargo e salário.

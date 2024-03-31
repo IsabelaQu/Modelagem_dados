@@ -1,0 +1,18 @@
+CREATE TABLE colaboradores (
+  cod_identificacao INT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  cpf VARCHAR(14) NOT NULL,
+  cargo VARCHAR(100) NOT NULL,
+  salario DECIMAL(10, 2) NOT NULL
+);
+
+INSERT INTO colaboradores (cod_identificacao, nome, cpf, cargo, salario) VALUES
+  (459621, 'Danilo', '123.456.789-90', 'Analista de Dados', 6124.00),
+  (968574, 'Matheus', '987.654.321-10', 'Tester 1', 3210.00),
+  (362514, 'Maiara', '963.345.246-60', 'Desenvolvedor Júnior', 2400.00),
+  (123456, 'Amanda', '567.890.123-45', 'Arquiteto de Software', 8000.00),
+  (789123, 'Pedro', '789.012.345-67', 'Coordenador de Desenvolvimento de Software', 9500.00),
+  (456789, 'Marcelo', '234.567.890-12', 'Gerente de Projetos', 10500.00);
+  
+
+SELECT * FROM colaboradores;
